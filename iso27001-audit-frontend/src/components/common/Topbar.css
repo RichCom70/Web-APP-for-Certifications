@@ -1,0 +1,18 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  background-color: var(--bg-topbar);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.topbar-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.topbar-env {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

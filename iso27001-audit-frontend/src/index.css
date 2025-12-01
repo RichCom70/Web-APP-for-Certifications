@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: #f4f5f7;
+  --bg-sidebar: #111827;
+  --bg-topbar: #ffffff;
+  --bg-card: #ffffff;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --accent: #2563eb;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+}
+
+/* Layout */
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  padding: 1.5rem 2rem;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+}
+
+.sidebar-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.sidebar-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-link.active {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #ffffff;
+}
+
+/* Topbar */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  background-color: var(--bg-topbar);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.topbar-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.topbar-env {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Table simple */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--bg-card);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+thead {
+  background-color: #f9fafb;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
