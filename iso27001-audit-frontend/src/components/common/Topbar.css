@@ -5,6 +5,9 @@
   padding: 0.8rem 2rem;
   background-color: var(--bg-topbar);
   border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 .topbar-title {

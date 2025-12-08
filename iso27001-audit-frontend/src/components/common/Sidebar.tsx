@@ -11,22 +11,40 @@ const Sidebar: React.FC = () => {
       </div>
 
       <nav className="sidebar-nav">
-        <NavLink to="/dashboard" className="sidebar-link">
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}
+        >
           Tableau de bord
         </NavLink>
-        <NavLink to="/documents" className="sidebar-link">
+        <NavLink
+          to="/documents"
+          className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}
+        >
           Corpus documentaire
         </NavLink>
-        <NavLink to="/requirements" className="sidebar-link">
+        <NavLink
+          to="/requirements"
+          className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}
+        >
           Matrice exigences
         </NavLink>
-        <NavLink to="/gap-analysis" className="sidebar-link">
+        <NavLink
+          to="/gap-analysis"
+          className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}
+        >
           Gap analysis
         </NavLink>
-        <NavLink to="/audit-readiness" className="sidebar-link">
+        <NavLink
+          to="/audit-readiness"
+          className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}
+        >
           Préparation audit
         </NavLink>
-        <NavLink to="/settings" className="sidebar-link">
+        <NavLink
+          to="/settings"
+          className={({ isActive }) => (isActive ? "sidebar-link active" : "sidebar-link")}
+        >
           Paramètres
         </NavLink>
       </nav>
